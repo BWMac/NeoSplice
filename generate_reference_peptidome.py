@@ -161,7 +161,7 @@ def main():
     data_store_directory = os.path.join(args.out_dir)
     path = os.path.join(data_store_directory + "peptidome_result/")
     if not os.path.isdir(path) and not os.path.exists(path):
-        os.makedirs(path, 0777)
+        os.makedirs(path, 0o777)
 
     for num in [8, 9, 10, 11, 15]:
         output_peptide(path, num, transcript_dic, genome)
